@@ -3,16 +3,12 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart, Users, BookOpen, Calendar, Shield, MessageCircle } from 'lucide-react';
 import Button from '../components/common/Button';
-<<<<<<< HEAD
 
-const HomePage: React.FC = () => {
-=======
 import { useUserStore } from '../store/userStore';
 
 const HomePage: React.FC = () => {
   const { isAuthenticated } = useUserStore();
 
->>>>>>> d66a9436bca9eb6c45863bfe08f0ba5cedba6ee5
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -31,26 +27,6 @@ const HomePage: React.FC = () => {
                 Join our supportive community where trauma survivors can connect, share experiences, and heal together in a secure virtual environment.
               </p>
               <div className="flex flex-wrap gap-4">
-<<<<<<< HEAD
-                <Link to="/auth">
-                  <Button 
-                    variant="primary" 
-                    size="large"
-                    icon={<Heart />}
-                  >
-                    Join Community
-                  </Button>
-                </Link>
-                <Link to="/resources">
-                  <Button 
-                    variant="outline" 
-                    size="large"
-                    icon={<BookOpen />}
-                  >
-                    Explore Resources
-                  </Button>
-                </Link>
-=======
                 <Button 
                   as={Link} 
                   to={isAuthenticated ? "/chat-rooms" : "/auth"} 
@@ -69,7 +45,6 @@ const HomePage: React.FC = () => {
                 >
                   Explore Resources
                 </Button>
->>>>>>> d66a9436bca9eb6c45863bfe08f0ba5cedba6ee5
               </div>
               <div className="mt-8 flex items-center">
                 <Shield className="text-primary-500 mr-2" size={20} />
@@ -251,27 +226,6 @@ const HomePage: React.FC = () => {
                 Join our community of survivors supporting each other through every step of the healing process.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD
-                <Link to="/auth">
-                  <Button 
-                    variant="secondary" 
-                    size="large"
-                    icon={<Heart />}
-                  >
-                    Join Community
-                  </Button>
-                </Link>
-                <Link to="/resources">
-                  <Button 
-                    variant="outline" 
-                    size="large"
-                    className="bg-transparent border-white hover:bg-white/10 text-white"
-                    icon={<BookOpen />}
-                  >
-                    Explore Resources
-                  </Button>
-                </Link>
-=======
                 <Button 
                   as={Link} 
                   to={isAuthenticated ? "/chat-rooms" : "/auth"} 
@@ -291,7 +245,6 @@ const HomePage: React.FC = () => {
                 >
                   Explore Resources
                 </Button>
->>>>>>> d66a9436bca9eb6c45863bfe08f0ba5cedba6ee5
               </div>
             </motion.div>
           </div>

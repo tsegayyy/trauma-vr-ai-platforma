@@ -291,15 +291,6 @@ const ResourcesPage: React.FC = () => {
                       ))}
                     </div>
                     
-<<<<<<< HEAD
-                    <button
-                      className="mt-auto"
-                      onClick={() => window.open(resource.url, '_blank', 'noopener noreferrer')}
-                    >
-                      <ExternalLink size={16} />
-                      Access Resource
-                    </button>
-=======
                     <Button
                       as="a"
                       href={resource.url}
@@ -311,7 +302,6 @@ const ResourcesPage: React.FC = () => {
                     >
                       Access Resource
                     </Button>
->>>>>>> d66a9436bca9eb6c45863bfe08f0ba5cedba6ee5
                   </div>
                 </motion.div>
               ))

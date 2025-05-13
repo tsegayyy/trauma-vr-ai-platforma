@@ -288,7 +288,6 @@ const CalendarPage: React.FC = () => {
                 </style>
                 
                 <Calendar
-<<<<<<< HEAD
                   onChange={(value) => {
                     // Handle the Value type from react-calendar properly
                     if (value instanceof Date) {
@@ -300,9 +299,6 @@ const CalendarPage: React.FC = () => {
                       setSelectedDate(null);
                     }
                   }}
-=======
-                  onChange={setSelectedDate}
->>>>>>> d66a9436bca9eb6c45863bfe08f0ba5cedba6ee5
                   value={selectedDate}
                   formatShortWeekday={(locale, date) => 
                     date.toLocaleDateString(locale, { weekday: 'short' }).slice(0, 1)
