@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               <span className="text-lg font-semibold text-primary-700">Serenity Space</span>
             </div>
             <p className="text-surface-600 mb-4">
-              A safe virtual environment where trauma survivors can connect, share experiences, and heal together.
+              A safef virtual environment where trauma survivors can connect, share experiences, and heal together.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-surface-500 hover:text-primary-500 transition-colors">
