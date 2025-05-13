@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { User, Mail, Bell, Shield, Moon, LogOut, Save, Edit2 } from 'lucide-react';
+import { User, Bell, Shield, LogOut, Save, Edit2 } from 'lucide-react';
 import Button from '../components/common/Button';
 import { useUserStore } from '../store/userStore';
 import { useNavigate } from 'react-router-dom';

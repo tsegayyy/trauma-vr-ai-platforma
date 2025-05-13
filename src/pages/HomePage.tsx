@@ -3,11 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart, Users, BookOpen, Calendar, Shield, MessageCircle } from 'lucide-react';
 import Button from '../components/common/Button';
-import { useUserStore } from '../store/userStore';
 
 const HomePage: React.FC = () => {
-  const { isAuthenticated } = useUserStore();
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -26,24 +23,24 @@ const HomePage: React.FC = () => {
                 Join our supportive community where trauma survivors can connect, share experiences, and heal together in a secure virtual environment.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button 
-                  as={Link} 
-                  to={isAuthenticated ? "/chat-rooms" : "/auth"} 
-                  variant="primary" 
-                  size="large"
-                  icon={<Heart />}
-                >
-                  {isAuthenticated ? "Join Support Groups" : "Join Our Community"}
-                </Button>
-                <Button 
-                  as={Link} 
-                  to="/resources" 
-                  variant="outline" 
-                  size="large"
-                  icon={<BookOpen />}
-                >
-                  Explore Resources
-                </Button>
+                <Link to="/auth">
+                  <Button 
+                    variant="primary" 
+                    size="large"
+                    icon={<Heart />}
+                  >
+                    Join Community
+                  </Button>
+                </Link>
+                <Link to="/resources">
+                  <Button 
+                    variant="outline" 
+                    size="large"
+                    icon={<BookOpen />}
+                  >
+                    Explore Resources
+                  </Button>
+                </Link>
               </div>
               <div className="mt-8 flex items-center">
                 <Shield className="text-primary-500 mr-2" size={20} />
@@ -225,25 +222,25 @@ const HomePage: React.FC = () => {
                 Join our community of survivors supporting each other through every step of the healing process.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button 
-                  as={Link} 
-                  to={isAuthenticated ? "/chat-rooms" : "/auth"} 
-                  variant="secondary" 
-                  size="large"
-                  icon={<Heart />}
-                >
-                  {isAuthenticated ? "Join Support Groups" : "Join Our Community"}
-                </Button>
-                <Button 
-                  as={Link} 
-                  to="/resources" 
-                  variant="outline" 
-                  size="large"
-                  className="bg-transparent border-white hover:bg-white/10 text-white"
-                  icon={<BookOpen />}
-                >
-                  Explore Resources
-                </Button>
+                <Link to="/auth">
+                  <Button 
+                    variant="secondary" 
+                    size="large"
+                    icon={<Heart />}
+                  >
+                    Join Community
+                  </Button>
+                </Link>
+                <Link to="/resources">
+                  <Button 
+                    variant="outline" 
+                    size="large"
+                    className="bg-transparent border-white hover:bg-white/10 text-white"
+                    icon={<BookOpen />}
+                  >
+                    Explore Resources
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>

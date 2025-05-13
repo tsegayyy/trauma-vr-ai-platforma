@@ -288,7 +288,17 @@ const CalendarPage: React.FC = () => {
                 </style>
                 
                 <Calendar
-                  onChange={setSelectedDate}
+                  onChange={(value) => {
+                    // Handle the Value type from react-calendar properly
+                    if (value instanceof Date) {
+                      setSelectedDate(value);
+                    } else if (Array.isArray(value) && value.length > 0) {
+                      // If it's a range or array, use the first date
+                      setSelectedDate(value[0] instanceof Date ? value[0] : null);
+                    } else {
+                      setSelectedDate(null);
+                    }
+                  }}
                   value={selectedDate}
                   formatShortWeekday={(locale, date) => 
                     date.toLocaleDateString(locale, { weekday: 'short' }).slice(0, 1)
