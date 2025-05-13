@@ -291,17 +291,15 @@ const ResourcesPage: React.FC = () => {
                       ))}
                     </div>
                     
-                    <Button
-                      as="a"
-                      href={resource.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      variant="primary"
-                      className="mt-auto"
-                      icon={<ExternalLink size={16} iconPosition="right" />}
-                    >
-                      Access Resource
-                    </Button>
+                    <a href={resource.url} target="_blank" rel="noopener noreferrer">
+                      <Button
+                        variant="primary"
+                        className="mt-auto"
+                        icon={<ExternalLink size={16} />}
+                      >
+                        Access Resource
+                      </Button>
+                    </a>
                   </div>
                 </motion.div>
               ))

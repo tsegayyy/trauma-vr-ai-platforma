@@ -295,7 +295,7 @@ const ChatRoomsPage: React.FC = () => {
                 <Button
                   variant="outline"
                   className="bg-white hover:bg-primary-50"
-                  icon={<ArrowRight size={18} iconPosition="right" />}
+                  icon={<ArrowRight size={18} />}
                 >
                   Talk to Professional
                 </Button>
