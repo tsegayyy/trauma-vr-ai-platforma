@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 /* This file uses Tailwind CSS directives which may be flagged as warnings by some IDEs */
 /* stylelint-disable at-rule-no-unknown */
 
+=======
+>>>>>>> d66a9436bca9eb6c45863bfe08f0ba5cedba6ee5
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
